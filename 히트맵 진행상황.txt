@@ -1,0 +1,23 @@
+1. Bbox와 Metrix Depth Map 결합
+-> 3차원 공간상의 물리적 면적 산출 
+MBTP (Minimum Bounding Triangle/Polygon) 적용
+
+2. CDKF (Central Difference Kalman Filter)
+
+3. 최적화된 객체 정보(Bbox, ID, Conf 등)를 3차원 좌표계로 통합
+
+4. 3D 히트맵 생성 및 시각화
+
+---------------------------------------------------------
+
+이면도로 병목 현상 예방, 인명 사고 예방\
+
+
+깃허브
+학습 코드
+모델 (best 및 경량화)
+BoT-Sort
+
+11/25 
+MBTP 적용 끝내고 비교
+(가능하면) CDKF 진행
