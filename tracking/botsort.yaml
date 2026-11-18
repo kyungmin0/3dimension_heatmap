@@ -1,0 +1,16 @@
+# BoT-SORT 설정 (Ultralytics 8.3.0 기본값을 복사해 프로젝트용으로 둔 파일)
+# 원본: ultralytics/cfg/trackers/botsort.yaml
+
+tracker_type: botsort   # botsort 또는 bytetrack
+track_high_thresh: 0.5  # 1차 매칭에 쓰는 검출 신뢰도 하한
+track_low_thresh: 0.1   # 2차 매칭(저신뢰 검출)에 쓰는 신뢰도 하한
+new_track_thresh: 0.6   # 매칭 안 된 검출로 새 ID를 만들 최소 신뢰도
+track_buffer: 30        # 사라진 객체의 ID를 유지할 프레임 수 (30fps 기준, 30 ≈ 1초)
+match_thresh: 0.8       # 트랙-검출 매칭 거리 임계값 (클수록 느슨하게 매칭)
+fuse_score: True        # IoU 거리에 검출 신뢰도를 반영할지 여부
+
+# BoT-SORT 전용
+gmc_method: sparseOptFlow  # 카메라 움직임 보정: orb, sift, ecc, sparseOptFlow, None(고정 카메라)
+proximity_thresh: 0.5      # ReID 사용 시 IoU 근접 조건 (8.3.0에서는 ReID 미지원)
+appearance_thresh: 0.25    # ReID 외형 유사도 임계값 (8.3.0에서는 ReID 미지원)
+with_reid: False
